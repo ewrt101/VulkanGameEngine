@@ -47,8 +47,16 @@ namespace eve {
 
 
     void EveAppBase::loadModels() {
+        /*
         std::vector<EveModel::Vertex> vertices{};
         sierpinski(vertices, 7, { -0.5f, 0.5f }, { 0.5f, 0.5f }, { 0.0f, -0.5f });
+        eveModel = std::make_unique<EveModel>(eveDevice, vertices);
+        */
+
+        std::vector<EveModel::Vertex> vertices{
+          {{0.0f, -0.5f}},
+          {{0.5f, 0.5f}},
+          {{-0.5f, 0.5f}} };
         eveModel = std::make_unique<EveModel>(eveDevice, vertices);
     }
 
